@@ -1,0 +1,254 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+}
+
+/* 目录样式 */
+.toc {
+    background-color: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.toc h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.toc ul {
+    list-style: none;
+}
+
+.toc li {
+    margin-bottom: 0.8rem;
+}
+
+.toc a {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.toc a:hover {
+    color: #2b6cb0;
+}
+
+/* 内容区域样式 */
+.report-section {
+    margin-bottom: 4rem;
+}
+
+.report-section h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.report-section h3 {
+    color: #4a5568;
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.report-section h4 {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.content ul {
+    margin: 1rem 0 1.5rem 2rem;
+}
+
+.content li {
+    margin-bottom: 0.8rem;
+    text-align: justify;
+}
+
+/* 对比分析样式 */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.comparison-item {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.comparison-item h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comparison-item li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.comparison-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4a5568;
+}
+
+/* 优缺点分析样式 */
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.pros, .cons {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.pros h4, .cons h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pros ul, .cons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pros li, .cons li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pros li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+}
+
+.cons li:before {
+    content: "×";
+    position: absolute;
+    left: 0;
+    color: #e53e3e;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+    color: #718096;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .comparison-grid,
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .toc {
+        page-break-after: always;
+    }
+
+    .report-section {
+        page-break-inside: avoid;
+    }
+} 
