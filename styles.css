@@ -459,4 +459,168 @@ footer::before {
 
 .diagram-container:hover .diagram-image {
     filter: brightness(0.9) contrast(1.2);
+}
+
+/* Add styles for the new Cloud Agriculture Valley section */
+/* Feature list styling */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.feature-list li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--secondary-color);
+}
+
+/* Company intro styling */
+.company-intro {
+    background-color: rgba(67, 97, 238, 0.1);
+    border-left: 4px solid var(--secondary-color);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 0 4px 4px 0;
+}
+
+.highlight-text {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+/* Process image styling */
+.process-image {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.process-image p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.diagram-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Note text styling */
+.note-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 15px 0;
+}
+
+/* Comparison card styling */
+.comparison-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0 30px 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.comparison-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.comparison-item:last-child {
+    border-bottom: none;
+}
+
+.comparison-item h4 {
+    background: rgba(67, 97, 238, 0.2);
+    margin: 0;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    color: var(--text-primary);
+    border-left: 4px solid var(--accent-color);
+}
+
+.comparison-item h4 i {
+    margin-right: 8px;
+    color: var(--secondary-color);
+}
+
+.comparison-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.bank-side, .payment-side {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px 20px;
+}
+
+.bank-side {
+    background-color: rgba(76, 145, 255, 0.1);
+    border-right: 1px solid var(--border-color);
+}
+
+.payment-side {
+    background-color: rgba(34, 34, 59, 0.7);
+}
+
+.bank-side p, .payment-side p {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.bank-side p strong, .payment-side p strong {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Regulatory requirements styling */
+.regulatory-requirements {
+    margin-top: 30px;
+    background-color: rgba(67, 97, 238, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.regulatory-requirements h4 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.file-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.document-image {
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comparison-content {
+        flex-direction: column;
+    }
+    
+    .bank-side {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
 } 
